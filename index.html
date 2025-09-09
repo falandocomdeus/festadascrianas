@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dia das Crianças Solidário — Patrocinadores</title>
+  <meta name="description" content="Portal oficial de patrocinadores e apoiadores do evento beneficente Dia das Crianças Solidário em Araraquara. Veja quem apoia, como doar e como se tornar patrocinador." />
+  <meta property="og:title" content="Dia das Crianças Solidário — Patrocinadores" />
+  <meta property="og:description" content="Conheça nossos patrocinadores, faça sua doação e saiba como apoiar o evento." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://placehold.co/1200x630/png?text=Dia%20das%20Crian%C3%A7as%20Solid%C3%A1rio" />
+  <meta name="theme-color" content="#ff6b6b" />
+  <style>
+    /* === Guia rápido de uso ===
+       1) Troque os textos entre [COLCHETES] pelos seus dados.
+       2) Substitua os LOGOS (img) pelos arquivos reais (PNG/SVG) — recomendação: fundo transparente.
+       3) Atualize links (WhatsApp, Instagram, formulário, PIX).
+       4) Publique o arquivo: Netlify Drop (arrastar e soltar), Vercel, GitHub Pages, ou hospedagem própria.
+       5) Gere um QR code apontando para a URL publicada e coloque no material impresso.
+    */
+
+    :root{
+      --bg: #fffdf8;
+      --ink: #1b1b1f;
+      --muted:#6b7280;
+      --primary:#ff6b6b;     /* coral */
+      --secondary:#ffd166;   /* amarelo */
+      --accent:#4ecdc4;      /* teal */
+      --violet:#a78bfa;      /* violeta suave */
+      --radius: 16px;
+      --shadow: 0 10px 30px rgba(0,0,0,.08);
+      --maxw: 1120px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
+      color:var(--ink);
+      background: linear-gradient(180deg,#fff5ea, var(--bg));
+    }
+    a{color:var(--primary);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+    header{
+      background: radial-gradient(1200px 500px at 10% -10%, #ffe5cf 0%, transparent 70%),
+                  radial-gradient(1200px 500px at 90% -20%, #d9fff9 0%, transparent 70%),
+                  linear-gradient(0deg, #fff 0%, #fff0);
+      border-bottom:1px solid #f1f5f9;
+    }
+    .hero{display:grid;grid-template-columns:1.2fr 1fr;gap:24px;align-items:center;padding:48px 0}
+    @media (max-width: 900px){.hero{grid-template-columns:1fr;padding:28px 0}}
+    .badge{display:inline-flex;gap:8px;align-items:center;background:#fff;border:1px solid #f1f5f9;border-radius:999px;padding:8px 14px;font-size:14px;color:#0f172a;box-shadow:var(--shadow)}
+    h1{font-size:clamp(28px,4.5vw,48px);line-height:1.05;margin:16px 0 10px}
+    .lead{font-size:clamp(16px,2.2vw,20px);color:#334155;max-width:60ch}
+    .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+    .btn{display:inline-flex;align-items:center;gap:10px;border-radius:12px;padding:12px 16px;border:1px solid transparent;font-weight:700;cursor:pointer;transition:.2s}
+    .btn.primary{background:var(--primary);color:#fff}
+    .btn.primary:hover{filter:brightness(.95)}
+    .btn.secondary{background:#fff;border-color:#e5e7eb;color:#111827}
+    .btn.secondary:hover{background:#f7f7f7}
+
+    .card{background:#fff;border:1px solid #eef2f7;border-radius:var(--radius);box-shadow:var(--shadow)}
+    .section{padding:40px 0}
+    .section h2{font-size:clamp(22px,3vw,28px);margin:0 0 12px}
+    .section p.sub{color:var(--muted);margin:0 0 24px}
+
+    /* Grades por nível */
+    .tier{margin:26px 0}
+    .tier h3{display:flex;align-items:center;gap:10px;margin:0 0 12px;font-size:20px}
+    .grid{display:grid;gap:14px}
+    .tier-diamante .grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+    .tier-ouro .grid{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+    .tier-prata .grid{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+    .tier-bronze .grid{grid-template-columns:repeat(auto-fit,minmax(120px,1fr))}
+
+    .logo{display:flex;align-items:center;justify-content:center;aspect-ratio:16/9;background:#f8fafc;border:1px dashed #e5e7eb;border-radius:12px;position:relative;overflow:hidden}
+    .logo img{max-width:90%;max-height:70%;object-fit:contain;filter: saturate(1.05)}
+    .logo .tag{position:absolute;top:8px;left:8px;background:#111827;color:#fff;font-size:12px;padding:4px 8px;border-radius:999px;opacity:.9}
+
+    .ribbon{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(90deg,var(--secondary),#ffeeba);padding:8px 12px;border-radius:10px;border:1px solid #e9d5a1;font-weight:700}
+
+    .howto{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    @media (max-width: 900px){.howto{grid-template-columns:1fr}}
+    .howto .card{padding:18px}
+
+    .pix{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    @media (max-width: 900px){.pix{grid-template-columns:1fr}}
+    .kbd{font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,"Cascadia Mono",Consolas,"Liberation Mono","Courier New",monospace; background:#111827;color:#fff;border-radius:10px;padding:8px 12px;font-size:14px}
+
+    footer{border-top:1px solid #e5e7eb;padding:24px 0;color:#475569}
+    .footgrid{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center}
+    @media (max-width: 800px){.footgrid{grid-template-columns:1fr}}
+
+    .pill{display:inline-flex;gap:8px;align-items:center;padding:6px 10px;border:1px solid #e5e7eb;border-radius:999px;background:#fff}
+    .small{font-size:12px;color:#6b7280}
+
+    .notice{background:linear-gradient(90deg,#f1f5f9,#fff);border-left:4px solid var(--accent);padding:12px 14px;border-radius:10px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container hero">
+      <div>
+        <span class="badge" aria-label="Informação do evento">🎈 Dia das Crianças Solidário • Araraquara</span>
+        <h1>Patrocinadores & Apoiadores</h1>
+        <p class="lead">Esta página reconhece publicamente quem torna o nosso evento possível e explica como você pode <strong>apoiar</strong>, <strong>doar</strong> ou <strong>entrar como patrocinador</strong>. Transparência e gratidão em primeiro lugar. 💛</p>
+        <div class="cta">
+          <a class="btn primary" href="https://wa.me/55XXXXXXXXXXX?text=Ol%C3%A1!%20Quero%20patrocinar%20o%20evento%20Dia%20das%20Crian%C3%A7as%20Solid%C3%A1rio" target="_blank" rel="noopener">Quero patrocinar</a>
+          <a class="btn secondary" href="#doar">Doar agora (PIX)</a>
+          <button class="btn secondary" id="shareBtn" type="button">Compartilhar</button>
+        </div>
+        <p class="small" style="margin-top:10px">Atualizado em: 09/09/2025 • Contato: <a href="mailto:contato@seuevento.org">contato@seuevento.org</a></p>
+      </div>
+      <div class="card" style="padding:18px">
+        <div class="ribbon">🎁 Quanto mais doações, mais vagas abrimos!</div>
+        <p>Meta atual: <strong>[ex.: 600 brinquedos]</strong> • Status: <strong>[ex.: 380 arrecadados]</strong></p>
+        <div class="notice small">Se sua empresa topar apoiar, colocamos o <strong>logo</strong> aqui com destaque proporcional ao plano escolhido (Diamante, Ouro, Prata, Bronze).</div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section container" id="patrocinadores">
+      <h2>Quem já apoia</h2>
+      <p class="sub">Obrigado a cada parceiro que acredita no impacto deste projeto. 💙</p>
+
+      <!-- TIER DIAMANTE -->
+      <div class="tier tier-diamante">
+        <h3>💎 Patrocinador Diamante</h3>
+        <div class="grid">
+          <figure class="logo" aria-label="Logo Patrocinador Diamante">
+            <span class="tag">1/3 topo</span>
+            <!-- Substitua a imagem abaixo pelo logo do patrocinador -->
+            <img src="https://placehold.co/800x400/png?text=Sua+Logo+Aqui" alt="Logo Patrocinador Diamante" />
+          </figure>
+        </div>
+      </div>
+
+      <!-- TIER OURO -->
+      <div class="tier tier-ouro">
+        <h3>🏅 Patrocinadores Ouro</h3>
+        <div class="grid">
+          <figure class="logo"><img src="https://placehold.co/600x300/png?text=Logo+Ouro+1" alt="Logo Ouro 1" /></figure>
+          <figure class="logo"><img src="https://placehold.co/600x300/png?text=Logo+Ouro+2" alt="Logo Ouro 2" /></figure>
+          <figure class="logo"><img src="https://placehold.co/600x300/png?text=Logo+Ouro+3" alt="Logo Ouro 3" /></figure>
+        </div>
+      </div>
+
+      <!-- TIER PRATA -->
+      <div class="tier tier-prata">
+        <h3>🥈 Patrocinadores Prata</h3>
+        <div class="grid">
+          <figure class="logo"><img src="https://placehold.co/500x250/png?text=Logo+Prata+1" alt="Logo Prata 1" /></figure>
+          <figure class="logo"><img src="https://placehold.co/500x250/png?text=Logo+Prata+2" alt="Logo Prata 2" /></figure>
+          <figure class="logo"><img src="https://placehold.co/500x250/png?text=Logo+Prata+3" alt="Logo Prata 3" /></figure>
+          <figure class="logo"><img src="https://placehold.co/500x250/png?text=Logo+Prata+4" alt="Logo Prata 4" /></figure>
+        </div>
+      </div>
+
+      <!-- TIER BRONZE -->
+      <div class="tier tier-bronze">
+        <h3>🥉 Patrocinadores Bronze</h3>
+        <div class="grid">
+          <figure class="logo"><img src="https://placehold.co/400x200/png?text=Logo+Bronze+1" alt="Logo Bronze 1" /></figure>
+          <figure class="logo"><img src="https://placehold.co/400x200/png?text=Logo+Bronze+2" alt="Logo Bronze 2" /></figure>
+          <figure class="logo"><img src="https://placehold.co/400x200/png?text=Logo+Bronze+3" alt="Logo Bronze 3" /></figure>
+          <figure class="logo"><img src="https://placehold.co/400x200/png?text=Logo+Bronze+4" alt="Logo Bronze 4" /></figure>
+          <figure class="logo"><img src="https://placehold.co/400x200/png?text=Logo+Bronze+5" alt="Logo Bronze 5" /></figure>
+          <figure class="logo"><img src="https://placehold.co/400x200/png?text=Logo+Bronze+6" alt="Logo Bronze 6" /></figure>
+        </div>
+      </div>
+
+      <!-- APOIADORES INSTITUCIONAIS -->
+      <div class="tier">
+        <h3>🤝 Apoio Institucional</h3>
+        <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(160px,1fr))">
+          <figure class="logo"><img src="https://placehold.co/420x200/png?text=Prefeitura" alt="Prefeitura (exemplo)" /></figure>
+          <figure class="logo"><img src="https://placehold.co/420x200/png?text=Secretaria+de+Esportes" alt="Secretaria de Esportes (exemplo)" /></figure>
+          <figure class="logo"><img src="https://placehold.co/420x200/png?text=Parceiro+Local" alt="Parceiro Local (exemplo)" /></figure>
+        </div>
+      </div>
+
+      <div class="notice small">Observação: Logos exibidos apenas como exemplo. Substitua após firmar a parceria e obter autorização de uso da marca.</div>
+    </section>
+
+    <section class="section container" id="planos">
+      <h2>Planos de Patrocínio</h2>
+      <p class="sub">Escolha um plano e tenha sua marca em destaque no evento, nas redes e nos materiais oficiais.</p>
+      <div class="howto">
+        <div class="card">
+          <h3>💎 Diamante</h3>
+          <ul>
+            <li>Logo em destaque (maior) no topo desta página e nos banners físicos.</li>
+            <li>Citação especial no palco + menção em todas as publicações.</li>
+            <li>Espaço para tenda/ativação no dia do evento.</li>
+          </ul>
+          <p><strong>Investimento sugerido:</strong> [R$ X.XXX]</p>
+        </div>
+        <div class="card">
+          <h3>🏅 Ouro</h3>
+          <ul>
+            <li>Logo em destaque nesta página e materiais digitais.</li>
+            <li>2 menções nas redes sociais.</li>
+          </ul>
+          <p><strong>Investimento sugerido:</strong> [R$ X.XXX]</p>
+        </div>
+        <div class="card">
+          <h3>🥈 Prata</h3>
+          <ul>
+            <li>Logo médio nesta página.</li>
+            <li>1 menção nas redes sociais.</li>
+          </ul>
+          <p><strong>Investimento sugerido:</strong> [R$ XXX]</p>
+        </div>
+        <div class="card">
+          <h3>🥉 Bronze</h3>
+          <ul>
+            <li>Logo nesta página (grade bronze).</li>
+          </ul>
+          <p><strong>Investimento sugerido:</strong> [R$ XX]</p>
+        </div>
+      </div>
+      <p style="margin-top:10px" class="small">Precisa de nota fiscal ou termo de parceria? Enviamos tudo certinho. <a href="https://wa.me/55XXXXXXXXXXX" target="_blank" rel="noopener">Fale conosco</a>.</p>
+    </section>
+
+    <section class="section container" id="doar">
+      <h2>Doar agora (PIX)</h2>
+      <p class="sub">Qualquer valor ajuda. Toda doação vira estrutura, brinquedos e lanches no dia do evento.</p>
+      <div class="pix">
+        <div class="card" style="padding:18px">
+          <h3>Chave PIX</h3>
+          <p><span class="kbd" id="pixKey">chave-pix-aqui@exemplo.com</span></p>
+          <div class="cta">
+            <button class="btn primary" type="button" id="copyPix">Copiar chave</button>
+            <a class="btn secondary" href="https://wa.me/55XXXXXXXXXXX?text=Enviei%20um%20PIX%20agora" target="_blank" rel="noopener">Avise pelo WhatsApp</a>
+          </div>
+          <p class="small">Razão social: [NOME DA ASSOCIAÇÃO/GRUPO] • CNPJ: [00.000.000/0000-00]</p>
+        </div>
+        <div class="card" style="padding:18px">
+          <h3>QR Code</h3>
+          <img src="https://placehold.co/300x300/svg?text=QR+PIX" alt="QR Code para doação via PIX" style="width:220px;height:auto"/>
+          <p class="small">Substitua esta imagem pelo QR do seu banco (PIX copia e cola).</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="sobre">
+      <h2>Sobre o evento</h2>
+      <p class="sub">[Data, horário e local]. Uma ação comunitária para oferecer um dia inesquecível às crianças: brinquedos, brincadeiras, lanche e muito carinho.</p>
+      <div class="howto">
+        <div class="card">
+          <h3>Como ajudar</h3>
+          <ul>
+            <li>Doe brinquedos novos (ou em ótimo estado).</li>
+            <li>Doe insumos (pipoca, algodão doce, sucos, descartáveis).</li>
+            <li>Seja voluntário(a) no dia do evento.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Transparência</h3>
+          <p>Prestaremos contas após o evento com <strong>relatório de doações e despesas</strong> e fotos da ação.</p>
+          <p><a class="pill" href="#">📄 Ver prestação de contas (em breve)</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footgrid">
+      <div>
+        <span class="pill">📸 <a href="https://instagram.com/seuevento" target="_blank" rel="noopener">@seuevento</a></span>
+        <span class="pill">📞 <a href="https://wa.me/55XXXXXXXXXXX" target="_blank" rel="noopener">WhatsApp</a></span>
+        <span class="pill">✉️ <a href="mailto:contato@seuevento.org">E-mail</a></span>
+      </div>
+      <div class="small">© 2025 Dia das Crianças Solidário • Feito com 💛 para a comunidade</div>
+    </div>
+  </footer>
+
+  <script>
+    // Compartilhar
+    const shareBtn = document.getElementById('shareBtn');
+    if (shareBtn) {
+      shareBtn.addEventListener('click', async () => {
+        const shareData = {
+          title: 'Dia das Crianças Solidário',
+          text: 'Conheça nossos patrocinadores e saiba como apoiar!',
+          url: window.location.href
+        };
+        try {
+          if (navigator.share) {
+            await navigator.share(shareData);
+          } else {
+            // Fallback: copiar link
+            await navigator.clipboard.writeText(window.location.href);
+            alert('Link copiado! Cole no WhatsApp/Instagram para compartilhar.');
+          }
+        } catch (e) {
+          console.log('Share cancelado', e);
+        }
+      });
+    }
+
+    // Copiar PIX
+    const btnCopy = document.getElementById('copyPix');
+    const pixKey = document.getElementById('pixKey');
+    if (btnCopy && pixKey) {
+      btnCopy.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(pixKey.textContent.trim());
+          btnCopy.textContent = 'Copiado!';
+          setTimeout(()=> btnCopy.textContent = 'Copiar chave', 1600);
+        } catch (e) { alert('Não foi possível copiar.'); }
+      });
+    }
+  </script>
+</body>
+</html>
