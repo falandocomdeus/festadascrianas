@@ -79,7 +79,10 @@
     .section p.sub{color:var(--muted);margin:0 0 24px}
 
     /* Logos — grade única */
-    .logos-grid{display:grid; grid-template-columns: repeat(auto-fit,minmax(160px,1fr)); gap:14px}
+    .logos-grid{ display:grid; grid-template-columns: repeat(4, 1fr); gap:14px; }
+    @media (max-width: 1024px){ .logos-grid{ grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 768px){ .logos-grid{ grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 480px){ .logos-grid{ grid-template-columns: 1fr; } }
     .logo-card{background:#fff; border:1px solid #e5e7eb; border-radius:16px; padding:8px; display:flex; align-items:center; justify-content:center; aspect-ratio:16/9; box-shadow: var(--shadow)}
     .logo-card img{max-width:95%; max-height:95%; object-fit:contain; filter:saturate(1.05)}
 /* Cards clicáveis */
